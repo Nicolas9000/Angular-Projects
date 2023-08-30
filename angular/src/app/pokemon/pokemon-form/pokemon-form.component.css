@@ -1,0 +1,17 @@
+.pokemonFormContainer {
+	text-align: center;
+}
+
+.pokemonForm {
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	border-radius: 10px;
+    margin: 0 20%;
+}
+
+.ng-valid[required] {
+    border-left: 5px solid green;
+}
+
+.ng-invalid:not(form) {
+    border-left: 5px solid red;
+}

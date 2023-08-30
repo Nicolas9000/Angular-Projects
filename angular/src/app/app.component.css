@@ -1,0 +1,14 @@
+.header {
+  background-color: #009688;
+  height: 4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+}
+
+.link {
+  font-size: 30px;
+  text-decoration: none;
+  color: white;
+}

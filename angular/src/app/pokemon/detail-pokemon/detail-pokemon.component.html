@@ -1,0 +1,50 @@
+<div *ngIf="pokemon">
+	<h1 class="pokemonName">{{ pokemon.name }}</h1>
+	<div class="pokemonInfoContainer">
+		<img [src]="pokemon.picture" />
+
+		<div>
+			<table class="pokemon-table">
+				<tr>
+					<td>Nom</td>
+					<td>{{ pokemon.name }}</td>
+				</tr>
+				<tr>
+					<td>Points de vie</td>
+					<td>{{ pokemon.hp }}</td>
+				</tr>
+				<tr>
+					<td>Dégats</td>
+					<td>{{ pokemon.cp }}</td>
+				</tr>
+				<tr>
+					<td>Types</td>
+					<td>
+						<span
+							class="type"
+							*ngFor="let type of pokemon.types"
+							[style]="type | pokemonTypeColor"
+							>{{ type }}</span
+						>
+					</td>
+				</tr>
+				<tr>
+					<td>Date de création</td>
+					<td>{{ pokemon.created | date : "dd/MM/yyyy" }}</td>
+				</tr>
+			</table>
+			<div class="separator"></div>
+			<div class="buttonContainer">
+				<a class="link" (click)="goToPokemon()">RETOUR</a>
+				<a class="link" (click)="goToEditPokemon(pokemon.id)">ÉDITER</a>
+				<a class="link" (click)="deletePokemon(pokemon.id)"
+					>SUPRIMMER</a
+				>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div *ngIf="!pokemon">
+	<app-loader></app-loader>
+</div>

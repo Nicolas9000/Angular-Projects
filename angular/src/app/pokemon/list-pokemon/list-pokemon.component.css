@@ -1,0 +1,31 @@
+.container {
+  margin: 5%;
+}
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(17em, 1fr));
+  gap: 2em;
+}
+
+.pokemonList {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 10px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  cursor: pointer;
+}
+.pokemonPicture {
+  width: 100%;
+  height: 100%;
+  max-width: 170px;
+  max-height: 170px;
+  object-fit: contain;
+  aspect-ratio: 1 / 1.25;
+}
+
+.pokemonType {
+  padding: 5px;
+  border-radius: 15px;
+  margin: 1px;
+}
